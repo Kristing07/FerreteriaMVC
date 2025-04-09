@@ -10,40 +10,44 @@ package Modelo;
  */
 public class Categoria {
    
-    private int idCategoria;
-    private String nombreCategoria;
-    private String descripcionCategoria;
+    private int IdCategoria;
+    private String NombreCategoria;
+    private String DescripcionCategoria;
 
-    public Categoria(int idCategoria, String nombreCategoria, String descripcionCategoria) {
-        this.idCategoria = idCategoria;
-        this.nombreCategoria = nombreCategoria;
-        this.descripcionCategoria = descripcionCategoria;
+    public Categoria(int IdCategoria, String NombreCategoria, String DescripcionCategoria) {
+        this.IdCategoria = IdCategoria;
+        this.NombreCategoria = NombreCategoria;
+        this.DescripcionCategoria = DescripcionCategoria;
+    }
+
+    public Categoria() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdCategoria() {
-        return idCategoria;
+        return IdCategoria;
     }
 
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setIdCategoria(int IdCategoria) {
+        this.IdCategoria = IdCategoria;
     }
 
     public String getNombreCategoria() {
-        return nombreCategoria;
+        return NombreCategoria;
     }
 
-    public void setNombreCategoria(String nombreCategoria) {
-        this.nombreCategoria = nombreCategoria;
+    public void setNombreCategoria(String NombreCategoria) {
+        this.NombreCategoria = NombreCategoria;
     }
 
     public String getDescripcionCategoria() {
-        return descripcionCategoria;
+        return DescripcionCategoria;
     }
 
-    public void setDescripcionCategoria(String descripcionCategoria) {
-        this.descripcionCategoria = descripcionCategoria;
+    public void setDescripcionCategoria(String DescripcionCategoria) {
+        this.DescripcionCategoria = DescripcionCategoria;
     }
-    
+
     
     
     

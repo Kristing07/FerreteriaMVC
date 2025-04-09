@@ -10,40 +10,46 @@ package Modelo;
  */
 public class Usuario {
     
-    private int idUsuario;
-    private String usuario;
-    private String contrasena;
+    private int IdUsuario;
+    private String Usuario;
+    private String Contrasena;
 
-    public Usuario(int idUsuario, String usuario, String contrasena) {
-        this.idUsuario = idUsuario;
-        this.usuario = usuario;
-        this.contrasena = contrasena;
+  
+public Usuario(int IdUsuario, String Usuario, String Contrasena) {
+        this.IdUsuario = IdUsuario;
+        this.Usuario = Usuario;
+        this.Contrasena = Contrasena;
+    }
+
+    public Usuario() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdUsuario() {
-        return idUsuario;
+        return IdUsuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdUsuario(int IdUsuario) {
+        this.IdUsuario = IdUsuario;
     }
 
     public String getUsuario() {
-        return usuario;
+        return Usuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setUsuario(String Usuario) {
+        this.Usuario = Usuario;
     }
 
     public String getContrasena() {
-        return contrasena;
+        return Contrasena;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setContrasena(String Contrasena) {
+        this.Contrasena = Contrasena;
     }
-    
+
+   
     
 }
 

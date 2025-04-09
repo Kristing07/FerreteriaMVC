@@ -10,91 +10,97 @@ package Modelo;
  */
 public class Clientes {
     
-    private int idCliente;
-    private String primerNombre;
-    private String segundoNombre;
-    private String primerApellido;
-    private String segundoApellido;
-    private String celular;
-    private String direccion;
-    private String cedula;
+    private int IdCliente;
+    private String PrimerNombre;
+    private String SegundoNombre;
+    private String PrimerApellido;
+    private String SegundoApellido;
+    private String Celular;
+    private String Direccion;
+    private String Cedula;
 
-    public Clientes(int idCliente, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String celular, String direccion, String cedula) {
-        this.idCliente = idCliente;
-        this.primerNombre = primerNombre;
-        this.segundoNombre = segundoNombre;
-        this.primerApellido = primerApellido;
-        this.segundoApellido = segundoApellido;
-        this.celular = celular;
-        this.direccion = direccion;
-        this.cedula = cedula;
+    public Clientes() {
     }
 
+    
+    
+    public Clientes(int IdCliente, String PrimerNombre, String SegundoNombre, String PrimerApellido, String SegundoApellido, String Celular, String Direccion, String Cedula) {
+        this.IdCliente = IdCliente;
+        this.PrimerNombre = PrimerNombre;
+        this.SegundoNombre = SegundoNombre;
+        this.PrimerApellido = PrimerApellido;
+        this.SegundoApellido = SegundoApellido;
+        this.Celular = Celular;
+        this.Direccion = Direccion;
+        this.Cedula = Cedula;
+    }
+
+    
+  
     public int getIdCliente() {
-        return idCliente;
+        return IdCliente;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setIdCliente(int IdCliente) {
+        this.IdCliente = IdCliente;
     }
 
     public String getPrimerNombre() {
-        return primerNombre;
+        return PrimerNombre;
     }
 
-    public void setPrimerNombre(String primerNombre) {
-        this.primerNombre = primerNombre;
+    public void setPrimerNombre(String PrimerNombre) {
+        this.PrimerNombre = PrimerNombre;
     }
 
     public String getSegundoNombre() {
-        return segundoNombre;
+        return SegundoNombre;
     }
 
-    public void setSegundoNombre(String segundoNombre) {
-        this.segundoNombre = segundoNombre;
+    public void setSegundoNombre(String SegundoNombre) {
+        this.SegundoNombre = SegundoNombre;
     }
 
     public String getPrimerApellido() {
-        return primerApellido;
+        return PrimerApellido;
     }
 
-    public void setPrimerApellido(String primerApellido) {
-        this.primerApellido = primerApellido;
+    public void setPrimerApellido(String PrimerApellido) {
+        this.PrimerApellido = PrimerApellido;
     }
 
     public String getSegundoApellido() {
-        return segundoApellido;
+        return SegundoApellido;
     }
 
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
+    public void setSegundoApellido(String SegundoApellido) {
+        this.SegundoApellido = SegundoApellido;
     }
 
     public String getCelular() {
-        return celular;
+        return Celular;
     }
 
-    public void setCelular(String celular) {
-        this.celular = celular;
+    public void setCelular(String Celular) {
+        this.Celular = Celular;
     }
 
     public String getDireccion() {
-        return direccion;
+        return Direccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
     }
 
     public String getCedula() {
-        return cedula;
+        return Cedula;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
+    public void setCedula(String Cedula) {
+        this.Cedula = Cedula;
     }
+
     
-    
-   
 }
 

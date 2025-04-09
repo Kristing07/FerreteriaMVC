@@ -12,20 +12,27 @@ import java.util.List;
 public class Venta {
     
     private int idVenta;
-    private Clientes cliente; // Relación con Cliente
-    private Empleado empleado; // Relación con Empleado
-    private Date fechaVenta;
-    private float totalVenta;
-    private List<DetallesVentas> detalles; // Relación con DetalleVenta
+    private int idCliente; // Relación con Cliente
+    private int idEmpleado; // Relación con Empleado
+    private Date FechaVenta;
+    private float TotalVenta;
+    private List<DetalleVenta> detalles; // Relación con DetalleVenta
 
-    public Venta(int idVenta, Clientes cliente, Empleado empleado, Date fechaVenta, float totalVenta, List<DetallesVentas> detalles) {
+    public Venta() {
+    }
+    
+    
+
+    public Venta(int idVenta, int idCliente, int ideEmpleado, Date FechaVenta, float TotalVenta, List<DetalleVenta> detalles) {
         this.idVenta = idVenta;
-        this.cliente = cliente;
-        this.empleado = empleado;
-        this.fechaVenta = fechaVenta;
-        this.totalVenta = totalVenta;
+        this.idCliente = idCliente;
+        this.idEmpleado = ideEmpleado;
+        this.FechaVenta = FechaVenta;
+        this.TotalVenta = TotalVenta;
         this.detalles = detalles;
     }
+
+  
 
     public int getIdVenta() {
         return idVenta;
@@ -35,46 +42,54 @@ public class Venta {
         this.idVenta = idVenta;
     }
 
-    public Clientes getCliente() {
-        return cliente;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setCliente(Clientes cliente) {
-        this.cliente = cliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public Empleado getEmpleado() {
-        return empleado;
+    public int getIdeEmpleado() {
+        return idEmpleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
+    public void setIdeEmpleado(int ideEmpleado) {
+        this.idEmpleado = ideEmpleado;
     }
 
     public Date getFechaVenta() {
-        return fechaVenta;
+        return FechaVenta;
     }
 
-    public void setFechaVenta(Date fechaVenta) {
-        this.fechaVenta = fechaVenta;
+    public void setFechaVenta(Date FechaVenta) {
+        this.FechaVenta = FechaVenta;
     }
 
     public float getTotalVenta() {
-        return totalVenta;
+        return TotalVenta;
     }
 
-    public void setTotalVenta(float totalVenta) {
-        this.totalVenta = totalVenta;
+    public void setTotalVenta(float TotalVenta) {
+        this.TotalVenta = TotalVenta;
     }
 
-    public List<DetallesVentas> getDetalles() {
+    public List<DetalleVenta> getDetalles() {
         return detalles;
     }
 
-    public void setDetalles(List<DetallesVentas> detalles) {
+    public void setDetalles(List<DetalleVenta> detalles) {
         this.detalles = detalles;
     }
-    
-    
+
+    public int getidEmpleado() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    public void setIdEmpleado(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    
+    
+}

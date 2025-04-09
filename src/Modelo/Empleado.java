@@ -10,90 +10,97 @@ import java.util.Date;
  */
 public class Empleado {
     
-    private int idEmpleado;
-    private String primerNombre;
-    private String segundoNombre;
-    private String primerApellido;
-    private String segundoApellido;
-    private String celular;
-    private String cargo;
-    private Date fechaContratacion;
+    private int IdEmpleado;
+    private String PrimerNombre;
+    private String SegundoNombre;
+    private String PrimerApellido;
+    private String SegundoApellido;
+    private String Celular;
+    private String Cargo;
+    private Date FechaContratacion;
 
-    public Empleado(int idEmpleado, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String celular, String cargo, Date fechaContratacion) {
-        this.idEmpleado = idEmpleado;
-        this.primerNombre = primerNombre;
-        this.segundoNombre = segundoNombre;
-        this.primerApellido = primerApellido;
-        this.segundoApellido = segundoApellido;
-        this.celular = celular;
-        this.cargo = cargo;
-        this.fechaContratacion = fechaContratacion;
+    public Empleado() {
+    }
+
+    
+ 
+    public Empleado(int IdEmpleado, String PrimerNombre, String SegundoNombre, String PrimerApellido, String SegundoApellido, String Celular, String Cargo, Date FechaContratacion) {
+        this.IdEmpleado = IdEmpleado;
+        this.PrimerNombre = PrimerNombre;
+        this.SegundoNombre = SegundoNombre;
+        this.PrimerApellido = PrimerApellido;
+        this.SegundoApellido = SegundoApellido;
+        this.Celular = Celular;
+        this.Cargo = Cargo;
+        this.FechaContratacion = FechaContratacion;
     }
 
     public int getIdEmpleado() {
-        return idEmpleado;
+        return IdEmpleado;
     }
 
-    public void setIdEmpleado(int idEmpleado) {
-        this.idEmpleado = idEmpleado;
+    public void setIdEmpleado(int IdEmpleado) {
+        this.IdEmpleado = IdEmpleado;
     }
 
     public String getPrimerNombre() {
-        return primerNombre;
+        return PrimerNombre;
     }
 
-    public void setPrimerNombre(String primerNombre) {
-        this.primerNombre = primerNombre;
+    public void setPrimerNombre(String PrimerNombre) {
+        this.PrimerNombre = PrimerNombre;
     }
 
     public String getSegundoNombre() {
-        return segundoNombre;
+        return SegundoNombre;
     }
 
-    public void setSegundoNombre(String segundoNombre) {
-        this.segundoNombre = segundoNombre;
+    public void setSegundoNombre(String SegundoNombre) {
+        this.SegundoNombre = SegundoNombre;
     }
 
     public String getPrimerApellido() {
-        return primerApellido;
+        return PrimerApellido;
     }
 
-    public void setPrimerApellido(String primerApellido) {
-        this.primerApellido = primerApellido;
+    public void setPrimerApellido(String PrimerApellido) {
+        this.PrimerApellido = PrimerApellido;
     }
 
     public String getSegundoApellido() {
-        return segundoApellido;
+        return SegundoApellido;
     }
 
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
+    public void setSegundoApellido(String SegundoApellido) {
+        this.SegundoApellido = SegundoApellido;
     }
 
     public String getCelular() {
-        return celular;
+        return Celular;
     }
 
-    public void setCelular(String celular) {
-        this.celular = celular;
+    public void setCelular(String Celular) {
+        this.Celular = Celular;
     }
 
     public String getCargo() {
-        return cargo;
+        return Cargo;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public void setCargo(String Cargo) {
+        this.Cargo = Cargo;
     }
 
     public Date getFechaContratacion() {
-        return fechaContratacion;
+        return FechaContratacion;
     }
 
-    public void setFechaContratacion(Date fechaContratacion) {
-        this.fechaContratacion = fechaContratacion;
+    public void setFechaContratacion(Date FechaContratacion) {
+        this.FechaContratacion = FechaContratacion;
     }
-    
+
+
+
     
     }
 

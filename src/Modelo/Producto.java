@@ -9,80 +9,83 @@ package Modelo;
  * @author portatiles
  */
 public class Producto {
-   private int idProducto;
-    private String nombreProducto;
-    private String descripcionProducto;
-    private Categoria categoria; // Relación con Categoria
-    private float precioUnitario;
-    private int stock;
-    private String imagen;
+   private int IdProducto;
+    private String NombreProducto;
+    private String DescripcionProducto;
+    private int Categoria; // Relación con Categoria
+    private float PrecioUnitario;
+    private int Stock;
+    private String Imagen;
 
-    public Producto(int idProducto, String nombreProducto, String descripcionProducto, Categoria categoria, float precioUnitario, int stock, String imagen) {
-        this.idProducto = idProducto;
-        this.nombreProducto = nombreProducto;
-        this.descripcionProducto = descripcionProducto;
-        this.categoria = categoria;
-        this.precioUnitario = precioUnitario;
-        this.stock = stock;
-        this.imagen = imagen;
+    public Producto() {
+    }
+    
+    
+    public Producto(int IdProducto, String NombreProducto, String DescripcionProducto, int Categoria, float PrecioUnitario, int Stock, String Imagen) {
+        this.IdProducto = IdProducto;
+        this.NombreProducto = NombreProducto;
+        this.DescripcionProducto = DescripcionProducto;
+        this.Categoria = Categoria;
+        this.PrecioUnitario = PrecioUnitario;
+        this.Stock = Stock;
+        this.Imagen = Imagen;
     }
 
     public int getIdProducto() {
-        return idProducto;
+        return IdProducto;
     }
 
-    public void setIdProducto(int idProducto) {
-        this.idProducto = idProducto;
+    public void setIdProducto(int IdProducto) {
+        this.IdProducto = IdProducto;
     }
 
     public String getNombreProducto() {
-        return nombreProducto;
+        return NombreProducto;
     }
 
-    public void setNombreProducto(String nombreProducto) {
-        this.nombreProducto = nombreProducto;
+    public void setNombreProducto(String NombreProducto) {
+        this.NombreProducto = NombreProducto;
     }
 
     public String getDescripcionProducto() {
-        return descripcionProducto;
+        return DescripcionProducto;
     }
 
-    public void setDescripcionProducto(String descripcionProducto) {
-        this.descripcionProducto = descripcionProducto;
+    public void setDescripcionProducto(String DescripcionProducto) {
+        this.DescripcionProducto = DescripcionProducto;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public int getCategoria() {
+        return Categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setCategoria(int Categoria) {
+        this.Categoria = Categoria;
     }
 
     public float getPrecioUnitario() {
-        return precioUnitario;
+        return PrecioUnitario;
     }
 
-    public void setPrecioUnitario(float precioUnitario) {
-        this.precioUnitario = precioUnitario;
+    public void setPrecioUnitario(float PrecioUnitario) {
+        this.PrecioUnitario = PrecioUnitario;
     }
 
     public int getStock() {
-        return stock;
+        return Stock;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setStock(int Stock) {
+        this.Stock = Stock;
     }
 
     public String getImagen() {
-        return imagen;
+        return Imagen;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setImagen(String Imagen) {
+        this.Imagen = Imagen;
     }
     
-    
-} 
 
+}

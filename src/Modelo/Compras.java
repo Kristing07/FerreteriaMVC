@@ -11,60 +11,67 @@ import java.util.List;
  */
 public class Compras {
         
-    private int idCompra;
-    private Empleado empleado; // Relación con Empleado
-    private Date fechaCompra;
-    private float totalCompra;
-    private List<DetallesCompras> detalles; // Relación con DetalleCompra
+    private int IdCompra;
+    private int IdEmpleado; // Relación con Empleado
+    private Date FechaCompra;
+    private float TotalCompra;
+    private List<DetallesCompras> Detalles; // Relación con DetalleCompra
 
-    public Compras(int idCompra, Empleado empleado, Date fechaCompra, float totalCompra, List<DetallesCompras> detalles) {
-        this.idCompra = idCompra;
-        this.empleado = empleado;
-        this.fechaCompra = fechaCompra;
-        this.totalCompra = totalCompra;
-        this.detalles = detalles;
+    public Compras() {
     }
+
+    
+    
+    public Compras(int IdCompra, int IdEmpleado, Date FechaCompra, float TotalCompra, List<DetallesCompras> Detalles) {
+        this.IdCompra = IdCompra;
+        this.IdEmpleado = IdEmpleado;
+        this.FechaCompra = FechaCompra;
+        this.TotalCompra = TotalCompra;
+        this.Detalles = Detalles;
+    }
+
+   
 
     public int getIdCompra() {
-        return idCompra;
+        return IdCompra;
     }
 
-    public void setIdCompra(int idCompra) {
-        this.idCompra = idCompra;
+    public void setIdCompra(int IdCompra) {
+        this.IdCompra = IdCompra;
     }
 
-    public Empleado getEmpleado() {
-        return empleado;
+    public int getIdEmpleado() {
+        return IdEmpleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
+    public void setIdEmpleado(int IdEmpleado) {
+        this.IdEmpleado = IdEmpleado;
     }
 
     public Date getFechaCompra() {
-        return fechaCompra;
+        return FechaCompra;
     }
 
-    public void setFechaCompra(Date fechaCompra) {
-        this.fechaCompra = fechaCompra;
+    public void setFechaCompra(Date FechaCompra) {
+        this.FechaCompra = FechaCompra;
     }
 
     public float getTotalCompra() {
-        return totalCompra;
+        return TotalCompra;
     }
 
-    public void setTotalCompra(float totalCompra) {
-        this.totalCompra = totalCompra;
+    public void setTotalCompra(float TotalCompra) {
+        this.TotalCompra = TotalCompra;
     }
 
     public List<DetallesCompras> getDetalles() {
-        return detalles;
+        return Detalles;
     }
 
-    public void setDetalles(List<DetallesCompras> detalles) {
-        this.detalles = detalles;
+    public void setDetalles(List<DetallesCompras> Detalles) {
+        this.Detalles = Detalles;
     }
-    
+
     
     }
 //
