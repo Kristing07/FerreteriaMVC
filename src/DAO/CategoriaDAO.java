@@ -31,18 +31,7 @@ public class CategoriaDAO {
     }
 }
 
-    public static void main(String[] args) {
-        try {
-            CategoriaDAO dao = new CategoriaDAO();
-            Categoria c1 = new Categoria();
-            c1.setNombreCategoria("Construcción");
-            c1.setDescripcionCategoria("Herramientas de cosntrucción");
-            dao.crearCategoria(c1);
-            System.out.println("Categoría creada con éxito!");
-        } catch (SQLException e) {
-            System.err.println("Error: " + e.getMessage());
-        }
-    }
+   
          public List<Categoria> leerTodasCategorias() throws SQLException {
         String sql = "SELECT * FROM Categorias";
         List<Categoria> categorias = new ArrayList<>();
@@ -60,6 +49,45 @@ public class CategoriaDAO {
         }
         return categorias;
     }
+    public void actualizarCategoria(Categoria categoria) throws SQLException {
+        String sql = "UPDATE Categorias SET nombre_categoria = ?, descripcion_categoria = ? WHERE id_categoria = ?";
 
+        try (Connection c = ConexionBD.getConnection();
+             PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setString(1, categoria.getNombreCategoria());
+            stmt.setString(2, categoria.getDescripcionCategoria());
+            stmt.setInt(3, categoria.getIdCategoria());
+            stmt.executeUpdate();
+        }
+    }
+
+    // Método para eliminar una categoría
+        public void eliminarCategoria(int idCategoria) throws SQLException {
+            String sql = "DELETE FROM Categorias WHERE id_categoria = ?";
+
+            try (Connection c = ConexionBD.getConnection();
+                 PreparedStatement stmt = c.prepareStatement(sql)) {
+                stmt.setInt(1, idCategoria);
+                stmt.executeUpdate();
+            }
+        }
+        public static void main(String[] args) {
+    try {
+        CategoriaDAO dao = new CategoriaDAO();
+        
+        // Actualizar una categoría
+        Categoria categoria = new Categoria();
+        categoria.setIdCategoria(2); // ID existente
+        categoria.setNombreCategoria("ElectrónicaActuali");
+        categoria.setDescripcionCategoria("Productos electrónicos modernos");
+        dao.actualizarCategoria(categoria);
+        System.out.println("Categoría actualizada.");
+        
+
+    } catch (SQLException e) {
+        System.err.println("Error: " + e.getMessage());
+    }
 }
+
+        }
 

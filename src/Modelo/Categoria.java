@@ -14,16 +14,18 @@ public class Categoria {
     private String NombreCategoria;
     private String DescripcionCategoria;
 
+    public Categoria() {
+    }
+    
+    
+
     public Categoria(int IdCategoria, String NombreCategoria, String DescripcionCategoria) {
         this.IdCategoria = IdCategoria;
         this.NombreCategoria = NombreCategoria;
         this.DescripcionCategoria = DescripcionCategoria;
     }
 
-    public Categoria() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+    
     public int getIdCategoria() {
         return IdCategoria;
     }

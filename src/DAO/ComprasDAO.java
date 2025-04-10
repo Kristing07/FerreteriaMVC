@@ -55,24 +55,66 @@ import Modelo.DetallesCompras;
         }
         return compras;
     }
-            public static void main(String[] args) {
+          // Métodos para Actualizar y Eliminar
+// Método para actualizar una compra
+    public void actualizarCompra(Compras compra) throws SQLException {
+        String sql = "UPDATE Compras SET id_empleado = ?, fecha_compra = ?, total_compra = ? WHERE id_compra = ?";
+
+        try (Connection c = ConexionBD.getConnection();
+             PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, compra.getIdEmpleado());
+            stmt.setDate(2, new java.sql.Date(compra.getFechaCompra().getTime()));
+            stmt.setFloat(3, compra.getTotalCompra());
+            stmt.setInt(4, compra.getIdCompra());
+            stmt.executeUpdate();
+        }
+    }
+
+    // Método para eliminar una compra
+    public void eliminarCompra(int idCompra) throws SQLException {
+        String sql = "DELETE FROM Compras WHERE id_compra = ?";
+
+        try (Connection c = ConexionBD.getConnection();
+             PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, idCompra);
+            stmt.executeUpdate();
+        }
+    }
+
+    // Método Main
+    public static void main(String[] args) {
         try {
-            DetallesComprasDAO dao = new DetallesComprasDAO();
-            List<DetallesCompras> detalles = dao.leerTodosDetallesCompra();
-            System.out.println("Lista de detalles de compra:");
-            for (DetallesCompras det : detalles) {
-                System.out.println("ID: " + det.getIdDetalleCompra() + 
-                                 ", Compra ID: " + det.getIdCompra() + 
-                                 ", Producto ID: " + det.getIdProducto() + 
-                                 ", Cantidad: " + det.getCantidad() + 
-                                 ", Precio Unitario: " + det.getPrecioUnitario());
+            ComprasDAO dao = new ComprasDAO();
+
+            // Actualizar una compra
+            Compras compra = new Compras();
+            compra.setIdCompra(1); // ID existente
+            compra.setIdEmpleado(2);
+            compra.setFechaCompra(new java.util.Date());
+            compra.setTotalCompra(1500.50f);
+            dao.actualizarCompra(compra);
+            System.out.println("Compra actualizada.");
+
+            // Eliminar una compra
+            dao.eliminarCompra(2); // ID a eliminar
+            System.out.println("Compra eliminada.");
+
+            // Leer y mostrar todas las compras para verificar
+            List<Compras> compras = dao.leerTodasCompras();
+            System.out.println("Lista de compras:");
+            for (Compras comp : compras) {
+                System.out.println("ID: " + comp.getIdCompra() + 
+                                   ", Empleado ID: " + comp.getIdEmpleado() + 
+                                   ", Fecha: " + comp.getFechaCompra() + 
+                                   ", Total: " + comp.getTotalCompra());
             }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         }
     }
-    }
 
-    
 
-   
+        }
+
+
+
